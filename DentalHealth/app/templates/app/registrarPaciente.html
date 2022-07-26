@@ -22,8 +22,9 @@
                 <div class="row" style="margin-left: 32rem">
                     <div class="col-sm-7">
                         <h2>Registrate</h2>
-                        <form id="registrarCuenta">
-                            <div class="form-group">
+                        <form name="registrarPaciente" method="POST" id="registrarCuenta">
+                            {{form}}
+                            {% comment %} <div class="form-group">
                                     <div class="form-group">
                                         <label for="message">Correo:</label>
                                         <input class="form-control disabled" id="subject" type="mail"></input>
@@ -38,10 +39,16 @@
                                       <input type="password" class="form-control disabled" id="name">
                                     </div>
                                 </div>
-                            </div>
+                            </div> {% endcomment %}
+                            {% if bandera %}
                             <div class="text-center">
-                                <button class="btn btn-green">Registrar</button>
+                                <button type="submit" class="btn btn-blue">Registrar</button>
                             </div>
+                            {% else %}
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-green">Actualizar</button>
+                            </div>
+                            {% endif %}
                         </form>
                     </div>
                 </div>

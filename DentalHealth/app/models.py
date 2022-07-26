@@ -1,7 +1,9 @@
 from django.db import models
 from django.utils import timezone
+from django.contrib.auth.models import User
 
 # Create your models here.
+
 
 class Rol(models.Model):
     nombre = models.CharField(max_length=15, null=False)
@@ -16,15 +18,12 @@ class Clinica(models.Model):
     def __str__(self):
         return self.nombre
 
-  
-
 class Cuenta(models.Model):
-    correo = models.CharField(max_length=45, null=False)
-    contraseña = models.CharField(max_length=45, null=False)
+    idUser = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
     idRol = models.ForeignKey(Rol, null=True, on_delete = models.SET_NULL)
 
     def __str__(self):
-        return self.correo
+        return str(self.idUser)
 
 class Paciente(models.Model):
     GENERO= (
@@ -35,7 +34,7 @@ class Paciente(models.Model):
     edad = models.CharField(max_length=2, null=False)
     direccion = models.CharField(max_length=45, null=False)
     genero = models.CharField(max_length=10, null=True, choices=GENERO)
-    idcuenta = models.ForeignKey(Cuenta, null=True, on_delete=models.SET_NULL)
+    idcuenta = models.ForeignKey(Cuenta, null=True, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.nombre
@@ -45,7 +44,7 @@ class Doctor(models.Model):
     especialidad = models.CharField(max_length=45, null=False)
     cedulaprof = models.CharField(max_length=45, null=False)
     idclinica = models.ForeignKey(Clinica, null=True, on_delete=models.SET_NULL)
-    idcuenta = models.ForeignKey(Cuenta, null=True, on_delete=models.SET_NULL)
+    idcuenta = models.ForeignKey(Cuenta, null=True, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.nombre
@@ -53,7 +52,7 @@ class Doctor(models.Model):
 class Administrador(models.Model):
     nombre = models.CharField(max_length=45, null=False)
     telefono = models.CharField(max_length=13, null=False)
-    idcuenta = models.ForeignKey(Cuenta, null=True, on_delete=models.SET_NULL)
+    idcuenta = models.ForeignKey(Cuenta, null=True, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.nombre

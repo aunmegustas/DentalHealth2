@@ -17,12 +17,13 @@
                 <div class="row text-center " style="margin-left:32rem;">
                     <div class="col-sm-7">
                         <h2>Iniciar Sesión</h2>
-                        <form  method="POST" id="login">
+                        <form  method="POST" name="login">
+                            {% csrf_token %}
                             
                             <div class="row" >
                                 <div class="form-group text-left">
-                                    <label for="message">Correo:</label>
-                                    <input class="form-control" name="email" id="email" type="mail"></input>
+                                    <label for="message">Usuario:</label>
+                                    <input class="form-control" name="username" id="username" type="text"></input>
                                 </div>
                                 <br>
                                 <div class="form-group text-left">

@@ -1,6 +1,19 @@
 from django.forms import ModelForm
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
 from django import forms
 from .models import *
+
+class CreateUserForm(UserCreationForm):
+    class Meta:
+        model = User
+        fields = ['username', 'email', 'password1', 'password2']
+        widgets = {
+            'username': forms.TextInput(attrs={'class': 'form-control'}),
+            'email': forms.TextInput(attrs={'class': 'form-control'}),
+            'password1': forms.TextInput(attrs={'class': 'form-control'}),
+            'password2': forms.TextInput(attrs={'class': 'form-control'})
+        } 
 
 class clinicaForm(ModelForm):
     class Meta:
@@ -28,11 +41,10 @@ class citaForm(ModelForm):
 class cuentaForm(ModelForm):
     class Meta:
         model = Cuenta
-        fields = ['correo','contraseña','idRol']
+        fields = ['idUser','idRol']
         widgets = {
-            'correo': forms.TextInput(attrs={'class': 'form-control'}),
-            'contraseña': forms.TextInput(attrs={'class': 'form-control'}),
-            'idRol': forms.TextInput(attrs={'class': 'invisible'})
+            'idUser': forms.TextInput(attrs={'class': 'form-control'}),
+            'idRol': forms.TextInput(attrs={'class': 'form-control'})
         }
                
 class doctorForm(ModelForm):

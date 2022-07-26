@@ -16,10 +16,12 @@
                     <li><a href="/">Inicio</a></li>
                     <li><a href="/pacienteVerCitas">Ver citas</a></li>
                     <li><a href="/registrarCita">Agendar Citas</a></li>
-                    <li><a href="/registrarCita">Perfil</a></li>
+                    {% if request.user.is_authenticated and idPaciente is not Null %}
+                    <li><a href="{% url 'pacientePerfil' idPaciente %}">Perfil</a></li>
+                    {% endif %}
                     
-                    <li><a href="/registro">Registro</a></li>
-                    <li><a href="/login">Ingresar</a></li>
+                    {% comment %} <li><a href="/registro">Registro</a></li> {% endcomment %}
+                    {% comment %} <li><a href="/login">Ingresar</a></li> {% endcomment %}
                     
                 </ul>
 
