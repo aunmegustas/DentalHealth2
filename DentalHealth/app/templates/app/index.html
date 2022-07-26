@@ -1,0 +1,191 @@
+{%  extends 'app/main.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<div id="hero" class="hero overlay" style="background: url({% static '/images/dental-care.jpg' %}) no-repeat center / cover; " >
+        
+    <div class="hero-content">
+        <div class="hero-text">
+            
+            <h1>Perfecta dentadura, perfecta blancura.</h1>
+            <p>Especialistas en sonrisas.</p>
+            <a href="/login" class="btn btn-border">Iniciar Sesión</a>
+            <a href="/registro" class="btn btn-border">Registrarse</a>
+            
+        </div><!-- /.hero-text -->
+    </div><!-- /.hero-content -->
+</div><!-- /.hero -->
+</div>
+
+    <main id="main" class="site-main">
+
+        <section class="site-section section-features">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-5 text-center">
+                        <h2>¡Agenda tu cita ya!</h2>
+                        <p style="text-align: justify; font-size: medium;">¡Muchas gracias por elegirnos! Sabemos que nuestro trabajo va en beneficio de uno de los derechos más importantes: la salud.
+                            Tu decisión nos motiva a ofrecerte un servicio de alta calidad, respaldado por modernas, cómodas y funcionales instalaciones; personal médico con alta especialización así como por nuestra experiencia operativa de 30 años.</p>
+                            <a class="btn btn-border" style="margin-top: 5rem;" href="#">Agendar cita</a>
+                    </div>
+                    <div class="col-sm-7 hidden-xs">
+                        <img src="{% static '/images/servicio.jpg' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </section><!-- /.section-features -->
+
+        <section class="site-section section-services gray-bg text-center">
+            <div class="container">
+                <h2 class="heading-separator">Nuestras Promociones</h2>
+                <p class="subheading-text">Promociones para diferentes tipos de tratamientos de ortodoncia.</p>
+                <div class="row">
+                    <div class="col-md-3 col-xs-6">
+                        <div class="service">
+                            <img src="{% static '/images/dentista.svg' %}" alt="">
+                            <h3 class="service-title">Básico Roth</h3>
+                            <p class="service-info"> Contado: $16,000<br>
+                            </p>
+                            
+                        </div><!-- /.service -->
+                    </div>
+                    <div class="col-md-3 col-xs-6">
+                        <div class="service">
+                            <img src="{% static '/images/dentista2.svg' %}" alt="">
+                            <h3 class="service-title">Design</h3>
+                            <p class="service-info">The strength of a design lies as much in the steps taken to create it as in the final result. </p>
+                        </div><!-- /.service -->
+                    </div>
+                    <div class="col-md-3 col-xs-6">
+                        <div class="service">
+                            <img src="{% static '/images/dentista3.svg' %}" alt="">
+                            <h3 class="service-title">Development</h3>
+                            <p class="service-info">Development is a way to make people aware of the services and/or products you are offering.</p>
+                        </div><!-- /.service -->
+                    </div>
+                    <div class="col-md-3 col-xs-6">
+                        <div class="service">
+                            <img src="{% static '/images/dentista4.svg ' %}" alt="">
+                            <h3 class="service-title">Photography</h3>
+                            <p class="service-info">Photographs are the legacy you leave for generations to come.</p>
+                        </div><!-- /.service -->
+                    </div>
+                </div>
+            </div>
+        </section><!-- /.section-services -->
+
+        <section class="site-section section-map-feature text-center">
+
+            <div class="container">
+                <h2>Resultados</h2>
+                <p>Los numeros hablan por nosotros.</p>
+                <div class="row" style="margin-top: 25rem">
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="counter-item">
+                            <p class="counter" data-to="377" data-speed="2000">0</p>
+                            <h3>Operaciones Realizadas</h3>
+                        </div><!-- /.counter-item -->
+                    </div>
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="counter-item">
+                            <p class="counter" data-to="1204" data-speed="2000">0</p>       
+                            <h3>Caries Retiradas</h3>
+                        </div> <!-- /.counter-item -->      
+                    </div>
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="counter-item">
+                            <p class="counter" data-to="459" data-speed="1000">0</p>
+                            <h3>Clientes Felices</h3>
+                        </div><!-- /.counter-item -->
+                    </div>
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="counter-item">
+                            <p class="counter" data-to="675" data-speed="1000">0</p>
+                            <h3>Horas de Espera Ahorradas</h3>
+                        </div><!-- /.counter-item -->
+                    </div>
+                </div>
+            </div>
+            
+        </section><!-- /.section-map-feature -->
+
+        <section class="site-section section-portfolio">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="heading-separator">Sonrisas Felices</h2>
+                    <p class="subheading-text">El resultado de su eleccion.</p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 col-xs-6">
+                        <div class="portfolio-item">
+                            <img src="{% static '/images/dientes1.jpg ' %}" class="img-res" alt="">
+                            <h4 class="portfolio-item-title">Sara Vega</h4>
+                            <h3 class="portfolio-item-title" style="margin-top: 5rem;">25 años</h3>
+                         
+                        </div><!-- /.portfolio-item -->
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-xs-6">
+                        <div class="portfolio-item">
+                            <img src="{% static '/images/dintes2.jpg ' %}" class="img-res" alt="">
+                            <h4 class="portfolio-item-title">Carmen Maria Gimenez</h4>
+                            <h3 class="portfolio-item-title" style="margin-top: 5rem;">20 años</h3>
+                         
+                       </div><!-- /.portfolio-item -->
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-xs-6">
+                        <div class="portfolio-item">
+                            <img src="{% static '/images/dintes3.jpg ' %}" class="img-res" alt="">
+                            <h4 class="portfolio-item-title">Marcela Moyano</h4>
+                            <h3 class="portfolio-item-title" style="margin-top: 5rem;">56 años</h3>
+                         
+                       </div><!-- /.portfolio-item -->
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-xs-6">
+                        <div class="portfolio-item">
+                            <img src="{% static '/images/dintes4.jpg ' %}" class="img-res" alt="">
+                            <h4 class="portfolio-item-title">Gloria Maria Llorente</h4>
+                            <h3 class="portfolio-item-title" style="margin-top: 5rem;">63 años</h3>
+                         
+                       </div><!-- /.portfolio-item -->
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-xs-6">
+                        <div class="portfolio-item">
+                            <img src="{% static '/images/dintes5.jpg' %}" class="img-res" alt="">
+                            <h4 class="portfolio-item-title">Veronica Andres</h4>
+                            <h3 class="portfolio-item-title" style="margin-top: 3rem;">70 años</h3>
+                         
+                        </div><!-- /.portfolio-item -->
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-xs-6">
+                        <div class="portfolio-item">
+                            <img src="{% static '/images/dintes6.jpg' %}" class="img-res" alt="">
+                            <h4 class="portfolio-item-title">Ricardo Diallo</h4>
+                            <h3 class="portfolio-item-title" style="margin-top: 3rem;">15 años</h3>
+                         </div><!-- /.portfolio-item -->
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-xs-6">
+                        <div class="portfolio-item">
+                            <img src="{% static '/images/dintes7.jpg' %}" class="img-res" alt="">
+                            <h4 class="portfolio-item-title">Araceli Cebrian</h4>
+                            <h3 class="portfolio-item-title" style="margin-top: 3rem;">21 años</h3>
+                         
+                        </div><!-- /.portfolio-item -->
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-xs-6">
+                        <div class="portfolio-item">
+                            <img src="{% static '/images/dintes8.jpg' %}" class="img-res" alt="">
+                            <h4 class="portfolio-item-title">Anabel Beltran</h4>
+                            <h3 class="portfolio-item-title" style="margin-top: 3rem;">19 años</h3>
+                         
+    
+                        </div><!-- /.portfolio-item -->
+                    </div>
+                </div>
+            </div>
+        </section><!-- /.section-portfolio -->
+
+    </main><!-- /#main -->
+
+    {% endblock %}

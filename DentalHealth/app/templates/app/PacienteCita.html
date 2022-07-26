@@ -1,0 +1,43 @@
+{%  extends 'app/main.html' %}
+{% load static%}
+{% block content %}
+
+    <div id="hero" class="hero overlay subpage-hero login-hero" style="height: 15rem; margin-bottom: 5rem;">
+            <div class="hero-content">
+                <div class="hero-text">
+
+                </div><!-- /.hero-text -->
+            </div><!-- /.hero-content -->
+        </div><!-- /.hero -->
+
+        <main id="main" class="site-main">
+
+            <div class="container text-center">
+                <form>
+                    <h3>Ingresa los Datos de tu Cita</h3>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-sm-6" style="margin-top: 2rem;">
+                            <label for="inputFecha" class="form-label">Fecha</label>
+                            <input type="date" class="form-control" id="inputFecha">
+                        </div>
+                        <div class="col-sm-6" style="margin-top: 2rem;">
+                            <label for="inputHora" class="form-label">Hora</label>
+                            <input type="time" class="form-control" id="inputHora">
+                            
+                        </div>
+                    </div>
+                    <div class="mb-3 " style="margin-top: 2rem;">
+                        <label for="inputDireccion" class="form-label">Descripción</label>
+                        <input type="text" class="form-control" id="inputDireccion">
+                    </div>
+
+                    <button type="submit" class="btn btn-green" style="margin-top: 2rem; margin-bottom: 3rem;">Guardar</button>
+                </form>
+            </div>
+
+
+        </main><!-- /#main -->
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{%  extends 'app/main.html' %}
+
+{% block content %}
+
+    <main id="main" class="site-main">
+
+        <div class="container text-center">
+        <form>
+            <legend>Ingresa los datos de tu perfil</legend>
+            <div class="mb-3">
+              <label for="inputNombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="inputNombre">
+            </div>
+            <div class="mb-3">
+                <label for="inputEspecialidad" class="form-label">Especialidad</label>
+                <input type="number" class="form-control" id="inputEspecialidad">
+            </div>
+            
+            <div class="mb-3">
+                <label for="inputDireccion" class="form-label">Cédula Profesional</label>
+                <input type="text" class="form-control" id="inputDireccion">
+            </div>
+            
+            <button type="submit" class="btn btn-green">Guardar</button>
+        </form>
+        </div>
+    </main><!-- /#main -->
+
+{% endblock %}

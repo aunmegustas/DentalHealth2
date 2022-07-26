@@ -1,0 +1,62 @@
+{%  extends 'app/main.html' %}
+
+{% block content %}
+
+    <main id="main" class="site-main">
+
+        <section class="site-section subpage-site-section section-contact-us">
+
+            <div class="container text-center">
+                <div class="row" style="margin-left: 0rem">
+                    <div class="col">
+                        <h2>Perfil Paciente</h2>
+                        <form action="/registrarCuenta" method="POST" id="registrarCuenta" >
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    
+                                      <label for="name">Correo:</label>
+                                      <input type="text" class="form-control" name="email">
+                                    
+                                </div>
+                                <div class="col-sm-6" >
+                                    
+                                      <label for="email">Contraseña:</label>
+                                      <input type="email" class="form-control" id="password">
+                                    
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                            <div class="col">
+                                <label for="name">Nombre:</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre">
+                            </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                            <div class="col-sm-6" style="margin-top: 2rem;">
+                                <label for="name">Edad:</label>
+                                <input type="number" class="form-control" id="edad" name="edad">
+                            </div>
+                            <div class="col-sm-6" style="margin-top: 2rem;">
+                                <label for="name">Género:</label>
+                                <input type="text" class="form-control" id="genero" name="genero">
+                            </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                            <div class="col" style="margin-top: 5rem;">
+                                <label for="name">Dirección:</label>
+                                <input type="text" class="form-control" id="direccion" name="direccion">
+                            </div>
+                        </div>
+    
+                            <button type="submit" class="btn btn-green" >Registrar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+        </section><!-- /.section-contact-us -->
+    </main><!-- /#main -->
+    {% endblock %}

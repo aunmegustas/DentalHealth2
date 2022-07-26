@@ -1,0 +1,49 @@
+{%  extends 'app/main.html' %}
+{% load static%}
+{% block content %}
+
+    <div id="hero" class="hero overlay subpage-hero contact-hero" style="background: url({% static '/images/contact-hero.jpg' %}) no-repeat center / cover; ">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Registro</h1>
+            </div><!-- /.hero-text -->
+        </div><!-- /.hero-content -->
+    </div><!-- /.hero -->
+
+        <section class="site-section subpage-site-section section-contact-us">
+
+            <div class="container text-center">
+                <div class="row" style="margin-left: 32rem">
+                    <div class="col-sm-7">
+                        <h2>Registrate</h2>
+                        <form name="registroFrom" action="" method="POST">
+                            {% csrf_token %}
+                            <div>
+                            <label >Correo:</label>
+                            {{form.correo}}
+                        </div>
+                        <div>
+                            <label for="name">Contraseña:</label>
+                            {{form.contraseña}}
+                        </div>
+                            {{form.idRol}}
+                            
+                            
+                            
+                            
+                            
+    
+                            <button type="submit" class="btn btn-green" >Registrar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+        </section><!-- /.section-contact-us -->
+    </main><!-- /#main -->
+
+    <script>
+        document.getElementById("id_idRol").value = {{rol}}
+    </script>
+
+    {% endblock %}

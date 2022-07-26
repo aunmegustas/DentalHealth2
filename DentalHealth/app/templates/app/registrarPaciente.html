@@ -1,0 +1,53 @@
+{%  extends 'app/main.html' %}
+{% load static%}
+{% block content %}
+
+    <div id="hero" class="hero overlay subpage-hero contact-hero" style="background: url({% static '/images/contact-hero.jpg' %}) no-repeat center / cover; ">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Registro</h1>
+                <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+                <li class="breadcrumb-item active">Registro</li>
+                </ol>
+            </div><!-- /.hero-text -->
+        </div><!-- /.hero-content -->
+    </div><!-- /.hero -->
+
+    <main id="main" class="site-main">
+
+        <section class="site-section subpage-site-section section-contact-us">
+
+            <div class="container text-center">
+                <div class="row" style="margin-left: 32rem">
+                    <div class="col-sm-7">
+                        <h2>Registrate</h2>
+                        <form id="registrarCuenta">
+                            <div class="form-group">
+                                    <div class="form-group">
+                                        <label for="message">Correo:</label>
+                                        <input class="form-control disabled" id="subject" type="mail"></input>
+                                    </div>
+                                </div>
+                            
+                            <div class="row">
+                                <br>
+                                <div class="form-group">
+                                    <div class="form-group">
+                                      <label for="name">Contraseña:</label>
+                                      <input type="password" class="form-control disabled" id="name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <button class="btn btn-green">Registrar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+        </section><!-- /.section-contact-us -->
+    </main><!-- /#main -->
+
+    {% endblock %}
